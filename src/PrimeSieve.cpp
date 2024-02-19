@@ -33,7 +33,7 @@ struct SmallPrime
   const char* str;
 };
 
-const primesieve::Array<SmallPrime, 8> smallPrimes
+const primesieve::Array<SmallPrime, 8> tinyPrimes
 {{
   { 2,  2, 0, "2" },
   { 3,  3, 0, "3" },
@@ -240,7 +240,7 @@ void PrimeSieve::printStatus(double old, double current)
 /// Process small primes <= 5 and small k-tuplets <= 17
 void PrimeSieve::processSmallPrimes()
 {
-  for (auto& p : smallPrimes)
+  for (auto& p : tinyPrimes)
   {
     if (p.first >= start_ && p.last <= stop_)
     {

@@ -209,7 +209,7 @@ void RiemannR_inverse(const CmdOptions& opts)
   std::cout << res << std::endl;
 }
 
-void cpuInfo()
+void printCpuInfo()
 {
   const primesieve::CpuInfo cpu;
 
@@ -292,7 +292,7 @@ int main(int argc, char* argv[])
 
     switch (opts.option)
     {
-      case OPTION_CPU_INFO:    cpuInfo(); break;
+      case OPTION_CPU_INFO:    printCpuInfo(); break;
       case OPTION_HELP:        help(/* exitCode */ 0); break;
       case OPTION_NTH_PRIME:   nthPrime(opts); break;
       case OPTION_R:           RiemannR(opts); break;
